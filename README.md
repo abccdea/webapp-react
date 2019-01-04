@@ -7,5 +7,10 @@ yarn add webpack webpack-dev-server babel-core babel-loader babel-preset-es2015 
 ```
 yarn add react react-dom redux react-redux react-router-dom redux-logger redux-thunk redux-promise axios
 ```
+## react 动画
+```
+yarn add react-transition-group
+```
+
 ## 入口文件
 src/index.js
