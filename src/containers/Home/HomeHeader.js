@@ -21,7 +21,10 @@ export default class HomeHeader extends React.Component {
         this.setState({
             isShow: !this.state.isShow
         })
-    }
+    };
+    changeType = (e) => {
+        this.props.changeType(e.target.dataset.type);
+    };
     render() {
         return (
             <div className="home-header">
@@ -37,10 +40,10 @@ export default class HomeHeader extends React.Component {
                         <ul className="home-header-list" style={{
                             ...defaultStyle,
                             ...transitionStyles[state]
-                        }}>
-                            <li>all</li>
-                            <li>react</li>
-                            <li>webpack</li>
+                        }} onClick={this.changeType.bind(this)}>
+                            <li data-type="0">all</li>
+                            <li data-type="1">react</li>
+                            <li data-type="2">webpack</li>
                         </ul>
                     )
                 }
